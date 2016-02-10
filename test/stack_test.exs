@@ -22,4 +22,8 @@ defmodule QueueTest do
     assert Queue.pop(pid) == :first_item
     assert Queue.count(pid) == 0
   end
+
+  test "It returns nil when queue is empty", %{pid: pid} do
+    assert Queue.pop(pid) == nil
+  end
 end

@@ -25,6 +25,11 @@ defmodule Queue do
     {:reply, head, tail}
   end
 
+  def handle_call(:pop, _from, []) do
+    {:reply, nil, []}
+  end
+
+
   def handle_call(:count, _from, state) do
     {:reply, Enum.count(state), state}
   end
