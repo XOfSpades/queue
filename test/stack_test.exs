@@ -1,5 +1,5 @@
 defmodule QueueTest do
-  use ExUnit.Case
+  use ExUnit.Case, async: true
   doctest Queue
 
   setup %{test: test} do
