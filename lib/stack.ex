@@ -1,2 +1,0 @@
-defmodule Stack do
-end
