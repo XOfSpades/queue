@@ -17,8 +17,8 @@ defmodule Queue do
 #################### Default GenServer Implementation ##########################
 ################################################################################
 
-  def start_link(default) do
-    GenServer.start_link(__MODULE__, default)
+  def start_link(params \\ [name: Queue]) do
+    GenServer.start_link(__MODULE__, params)
   end
 
   def handle_call(:pop, _from, [head|tail]) do

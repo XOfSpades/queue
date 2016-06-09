@@ -6,9 +6,9 @@ defmodule SuperviseProcess do
   end
 
   def init(_params) do
-    queues = [
+    children = [
       worker(Queue, [])
     ]
-    supervise(queues, strategy: :one_for_one)
+    supervise(children, strategy: :one_for_one)
   end
 end
